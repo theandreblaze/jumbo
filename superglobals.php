@@ -6,26 +6,33 @@ _SuperGblobals in PHP
 </head>
 <body>
 <h1>
-Server Details
+Data Exchange
 </h1>
 
-<ul>
+<h3>
+Login
 <?php
 
-
-//superglobals are objects available by default in the PHP 'prelude'
-
-//naming convention is to precede name with an underscore
-foreach($_SERVER as &$i){
-
-	echo "<br><li>$i;</li>";
-
-}
 ?>
-</ul>
+</h3>
+
+
+<form method="get" action="<php?
+
+echo $_SERVER["PHP_SELF"];?>">
+
+<label for="username">username</label>
+<select id="name" name="usernames">
+<option value="Carl">Carl</option><option value="Gerta">Gerta</option>
+<button type=submit>select</button>
+
+</form>
+
+
 
 
 
 </body>
+
 
 </html>
